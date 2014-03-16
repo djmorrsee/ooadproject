@@ -1,0 +1,20 @@
+Use Cases
+
+1) Display Calendar
+- Show Day View
+- Show Week View
+- Show Month View
+2) Add Event (Set Date)
+3) Edit Event
+- Date Settings
+- Sound Settings
+- Alert Settings
+4) Be Alarmed
+- Vibration Alarm
+- Sound Alarm
+- Snooze
+- Turn Off
+5) Delete Event
+6) Edit Global Settings
+7) Show list of Events
+
