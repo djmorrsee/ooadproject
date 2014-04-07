@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuViewController.h"
+#import "CalendarController.h"
 
 @implementation AppDelegate
 
@@ -17,8 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.menuViewController = [[MenuViewController alloc] init];
+    
+    
+    self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -63,6 +69,10 @@
             abort();
         } 
     }
+}
+
+- (void)showCalendar {
+    [self.calendarController showCalendar];
 }
 
 #pragma mark - Core Data stack
