@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MenuViewController.h"
-#import "CalendarController.h"
+#import "CalendarViewController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +22,7 @@
     
     // Override point for customization after application launch.
     self.menuViewController = [[MenuViewController alloc] init];
-    
+    self.calendarViewController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
     
     self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];
@@ -72,7 +72,7 @@
 }
 
 - (void)showCalendar {
-    [self.calendarController showCalendar];
+    [self.window.rootViewController presentViewController:self.calendarViewController animated:YES completion:nil];
 }
 
 #pragma mark - Core Data stack
