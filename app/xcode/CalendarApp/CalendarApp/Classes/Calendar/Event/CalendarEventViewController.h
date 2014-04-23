@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class CalendarEvent;
+
 @interface CalendarEventViewController : UIViewController
+
+@property CalendarEvent *event;
 
 @end

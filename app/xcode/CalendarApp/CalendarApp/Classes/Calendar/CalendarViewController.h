@@ -2,28 +2,18 @@
 //  CalendarViewController.h
 //  CalendarApp
 //
-//  Created by Daniel Morrissey on 4/11/14.
+//  Created by Daniel Morrissey on 4/23/14.
 //  Copyright (c) 2014 Daniel Morrissey. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class CalendarDayViewController;
-@class CalendarWeekViewController;
-@class CalendarMonthViewController;
+@class Calendar;
 
 @interface CalendarViewController : UIViewController
 
-@property IBOutlet UIView *calendarView;
+@property (weak) Calendar *cal;
 
-@property CalendarDayViewController *dayViewController;
-@property CalendarWeekViewController *weekViewController;
-@property CalendarMonthViewController *monthViewContorller;
-
--(IBAction)showDay:(id)sender;
--(IBAction)showWeek:(id)sender;
--(IBAction)showMonth:(id)sender;
-
--(IBAction)backToMenu:(id)sender;
+- (void)displaySelectedDate;
 
 @end

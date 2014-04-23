@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862D38AF19081561008693B7 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D38AE19081561008693B7 /* Calendar.m */; };
+		862D38B21908162C008693B7 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D38B11908162C008693B7 /* CalendarViewController.m */; };
 		865F291E18D639EC001F1B00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865F291D18D639EC001F1B00 /* Foundation.framework */; };
 		865F292018D639EC001F1B00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865F291F18D639EC001F1B00 /* CoreGraphics.framework */; };
 		865F292218D639EC001F1B00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865F292118D639EC001F1B00 /* UIKit.framework */; };
@@ -38,8 +40,8 @@
 		8695BC4318F3274500AA6A7A /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695BC4218F3274500AA6A7A /* CalendarEvent.m */; };
 		8695BC4918F327C200AA6A7A /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695BC4818F327C200AA6A7A /* NotificationController.m */; };
 		8695BC4C18F327D700AA6A7A /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8695BC4B18F327D700AA6A7A /* DatabaseController.m */; };
-		86FE858118F8785D008D3AD8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FE857F18F8785D008D3AD8 /* CalendarViewController.m */; };
-		86FE858218F8785D008D3AD8 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86FE858018F8785D008D3AD8 /* CalendarViewController.xib */; };
+		86FE858118F8785D008D3AD8 /* CalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FE857F18F8785D008D3AD8 /* CalendarController.m */; };
+		86FE858218F8785D008D3AD8 /* CalendarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86FE858018F8785D008D3AD8 /* CalendarController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862D38AD19081561008693B7 /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calendar.h; path = Classes/Calendar/Calendar.h; sourceTree = "<group>"; };
+		862D38AE19081561008693B7 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calendar.m; path = Classes/Calendar/Calendar.m; sourceTree = "<group>"; };
+		862D38B01908162C008693B7 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = Classes/Calendar/CalendarViewController.h; sourceTree = "<group>"; };
+		862D38B11908162C008693B7 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarViewController.m; path = Classes/Calendar/CalendarViewController.m; sourceTree = "<group>"; };
 		865F291A18D639EC001F1B00 /* CalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865F291D18D639EC001F1B00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		865F291F18D639EC001F1B00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,9 +103,9 @@
 		8695BC4818F327C200AA6A7A /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationController.m; path = Classes/Utility/Notifications/NotificationController.m; sourceTree = "<group>"; };
 		8695BC4A18F327D700AA6A7A /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseController.h; path = Classes/Utility/Database/DatabaseController.h; sourceTree = "<group>"; };
 		8695BC4B18F327D700AA6A7A /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseController.m; path = Classes/Utility/Database/DatabaseController.m; sourceTree = "<group>"; };
-		86FE857E18F8785D008D3AD8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = Classes/Calendar/CalendarViewController.h; sourceTree = "<group>"; };
-		86FE857F18F8785D008D3AD8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarViewController.m; path = Classes/Calendar/CalendarViewController.m; sourceTree = "<group>"; };
-		86FE858018F8785D008D3AD8 /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarViewController.xib; path = Classes/Calendar/CalendarViewController.xib; sourceTree = "<group>"; };
+		86FE857E18F8785D008D3AD8 /* CalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarController.h; path = Classes/Calendar/CalendarController.h; sourceTree = "<group>"; };
+		86FE857F18F8785D008D3AD8 /* CalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarController.m; path = Classes/Calendar/CalendarController.m; sourceTree = "<group>"; };
+		86FE858018F8785D008D3AD8 /* CalendarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarController.xib; path = Classes/Calendar/CalendarController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +245,8 @@
 			children = (
 				8695BC3B18F326FA00AA6A7A /* Event */,
 				8695BC2218F325CC00AA6A7A /* Views */,
+				862D38AD19081561008693B7 /* Calendar.h */,
+				862D38AE19081561008693B7 /* Calendar.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -246,12 +254,14 @@
 		8695BC2218F325CC00AA6A7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				862D38B01908162C008693B7 /* CalendarViewController.h */,
+				862D38B11908162C008693B7 /* CalendarViewController.m */,
 				8695BC3218F3269700AA6A7A /* Day */,
 				8695BC2E18F3267400AA6A7A /* Week */,
 				8695BC2D18F3266800AA6A7A /* Month */,
-				86FE857E18F8785D008D3AD8 /* CalendarViewController.h */,
-				86FE857F18F8785D008D3AD8 /* CalendarViewController.m */,
-				86FE858018F8785D008D3AD8 /* CalendarViewController.xib */,
+				86FE857E18F8785D008D3AD8 /* CalendarController.h */,
+				86FE857F18F8785D008D3AD8 /* CalendarController.m */,
+				86FE858018F8785D008D3AD8 /* CalendarController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -405,7 +415,7 @@
 			files = (
 				865F292A18D639EC001F1B00 /* InfoPlist.strings in Resources */,
 				8695BC1418F324AA00AA6A7A /* MenuViewController.xib in Resources */,
-				86FE858218F8785D008D3AD8 /* CalendarViewController.xib in Resources */,
+				86FE858218F8785D008D3AD8 /* CalendarController.xib in Resources */,
 				865F293518D639ED001F1B00 /* Images.xcassets in Resources */,
 				8695BC4018F3273200AA6A7A /* CalendarEventViewController.xib in Resources */,
 				8695BC3718F326B900AA6A7A /* CalendarDayViewController.xib in Resources */,
@@ -436,12 +446,14 @@
 				8695BC1818F324E700AA6A7A /* SettingsViewController.m in Sources */,
 				8695BC3618F326B900AA6A7A /* CalendarDayViewController.m in Sources */,
 				8695BC2B18F3266400AA6A7A /* CalendarWeekViewController.m in Sources */,
-				86FE858118F8785D008D3AD8 /* CalendarViewController.m in Sources */,
+				86FE858118F8785D008D3AD8 /* CalendarController.m in Sources */,
 				8695BC3F18F3273200AA6A7A /* CalendarEventViewController.m in Sources */,
 				865F292C18D639EC001F1B00 /* main.m in Sources */,
 				8695BC1318F324AA00AA6A7A /* MenuViewController.m in Sources */,
 				8695BC4C18F327D700AA6A7A /* DatabaseController.m in Sources */,
 				8695BC4918F327C200AA6A7A /* NotificationController.m in Sources */,
+				862D38B21908162C008693B7 /* CalendarViewController.m in Sources */,
+				862D38AF19081561008693B7 /* Calendar.m in Sources */,
 				8695BC4318F3274500AA6A7A /* CalendarEvent.m in Sources */,
 				8695BC3A18F326E700AA6A7A /* GlobalSettings.m in Sources */,
 			);

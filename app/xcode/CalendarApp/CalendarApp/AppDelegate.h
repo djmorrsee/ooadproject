@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class MenuViewController;
-@class CalendarViewController;
+@class CalendarController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -20,7 +20,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property MenuViewController *menuViewController;
-@property CalendarViewController *calendarViewController;
+@property CalendarController *calendarViewController;
 
 - (void)showCalendar;
 

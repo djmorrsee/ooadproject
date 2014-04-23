@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MenuViewController.h"
-#import "CalendarViewController.h"
+#import "CalendarController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +22,7 @@
     
     // Override point for customization after application launch.
     self.menuViewController = [[MenuViewController alloc] init];
-    self.calendarViewController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+    self.calendarViewController = [[CalendarController alloc] initWithNibName:@"CalendarController" bundle:nil];
     
     self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];

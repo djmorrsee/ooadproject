@@ -10,4 +10,7 @@
 
 @interface CalendarEvent : NSObject
 
+@property NSDate *eventDate;
+@property NSString *eventTitle;
+
 @end
