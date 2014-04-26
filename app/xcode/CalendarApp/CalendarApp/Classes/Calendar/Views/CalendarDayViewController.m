@@ -27,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    tableData = [NSArray arrayWithObjects:@"Event1", @"Event2", nil];
+    tableData = [NSArray arrayWithObjects:@"Event1", @"Event2",@"event3",@"event4",@"event5",@"event6",@"event7",@"event9",@"event10",@"event11", nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,5 +60,12 @@ NSArray *tableData;
     return cell;
     
 }
-
+/* Will reimpliment this to go to single event view on click
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *message = [NSString stringWithFormat:@"Put in event details here.", [tableData objectAtIndex:indexPath.row]];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:message delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    [alert show];
+}
+*/
 @end
