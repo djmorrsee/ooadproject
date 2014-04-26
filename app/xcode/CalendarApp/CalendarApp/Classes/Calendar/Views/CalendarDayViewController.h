@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CalendarViewController.h"
 
-@interface CalendarDayViewController : CalendarViewController
+@interface CalendarDayViewController : CalendarViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
