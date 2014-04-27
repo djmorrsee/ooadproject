@@ -7,6 +7,7 @@
 //
 
 #import "CalendarDayViewController.h"
+#import "Calendar.h"
 
 @interface CalendarDayViewController ()
 
@@ -27,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.cal.calendarEvents;
     tableData = [NSArray arrayWithObjects:@"Event1", @"Event2",@"event3",@"event4",@"event5",@"event6",@"event7",@"event9",@"event10",@"event11", nil];
 
 }

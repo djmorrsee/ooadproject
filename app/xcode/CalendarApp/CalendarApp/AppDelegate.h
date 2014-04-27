@@ -10,6 +10,8 @@
 
 @class MenuViewController;
 @class CalendarController;
+@class DatabaseController;
+@class NotificationController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -21,8 +23,10 @@
 
 @property MenuViewController *menuViewController;
 @property CalendarController *calendarViewController;
+@property DatabaseController *databaseController;
 
 - (void)showCalendar;
+- (void)loadCalendarEvents;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

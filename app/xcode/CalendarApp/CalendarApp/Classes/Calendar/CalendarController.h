@@ -9,14 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class Calendar;
-
 @class CalendarDayViewController;
 @class CalendarWeekViewController;
 @class CalendarMonthViewController;
 
 @interface CalendarController : UIViewController
-
-@property IBOutlet UIView *calendarView;
 
 @property Calendar *cal;
 
@@ -24,6 +21,11 @@
 @property CalendarWeekViewController *weekViewController;
 @property CalendarMonthViewController *monthViewContorller;
 
+// Interface Variables
+@property IBOutlet UIView *calendarView;
+
+
+// Interface Actions
 -(IBAction)showDay:(id)sender;
 -(IBAction)showWeek:(id)sender;
 -(IBAction)showMonth:(id)sender;

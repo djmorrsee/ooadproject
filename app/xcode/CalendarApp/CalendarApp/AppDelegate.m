@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "MenuViewController.h"
 #import "CalendarController.h"
+#import "DatabaseController.h"
+
+#import "Calendar.h"
 
 @implementation AppDelegate
 
@@ -21,8 +24,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
+    
+    // Menu Controller
     self.menuViewController = [[MenuViewController alloc] init];
+    
+    // Calendar Controller
     self.calendarViewController = [[CalendarController alloc] initWithNibName:@"CalendarController" bundle:nil];
+    [self.calendarViewController.cal selectDate:[NSDate date]];
+    
+    // Database Controller
+    self.databaseController = [[DatabaseController alloc] init];
+    
+    [self loadCalendarEvents];
     
     self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];
@@ -71,8 +84,14 @@
     }
 }
 
+#pragma mark - Authored Methods
+
 - (void)showCalendar {
     [self.window.rootViewController presentViewController:self.calendarViewController animated:YES completion:nil];
+}
+
+- (void)loadCalendarEvents {
+    [self.calendarViewController.cal initializeEvents];
 }
 
 #pragma mark - Core Data stack

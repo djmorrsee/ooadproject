@@ -8,13 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+@class CalendarEvent;
+
 @interface Calendar : NSObject
 
 @property NSDate *currentDate;
 @property NSDate *selectedDate;
 
-@property NSMutableArray *calendarEvents;
+@property NSArray *calendarEvents;
 
 - (void)createEventForSelectedDate;
+
+- (void)initializeEvents;
+- (void)addEvent:(CalendarEvent *)event;
+
+- (void)selectDate:(NSDate *)date;
 
 @end

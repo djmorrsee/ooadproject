@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86248BA2190D8516004DF2F9 /* CD_CalEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 86248BA1190D8516004DF2F9 /* CD_CalEvent.m */; };
 		862D38AF19081561008693B7 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D38AE19081561008693B7 /* Calendar.m */; };
 		862D38B21908162C008693B7 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D38B11908162C008693B7 /* CalendarViewController.m */; };
 		865F291E18D639EC001F1B00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865F291D18D639EC001F1B00 /* Foundation.framework */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86248BA0190D8516004DF2F9 /* CD_CalEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD_CalEvent.h; path = Classes/Utility/Database/ManagedObjects/CD_CalEvent.h; sourceTree = "<group>"; };
+		86248BA1190D8516004DF2F9 /* CD_CalEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CD_CalEvent.m; path = Classes/Utility/Database/ManagedObjects/CD_CalEvent.m; sourceTree = "<group>"; };
 		862D38AD19081561008693B7 /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calendar.h; path = Classes/Calendar/Calendar.h; sourceTree = "<group>"; };
 		862D38AE19081561008693B7 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calendar.m; path = Classes/Calendar/Calendar.m; sourceTree = "<group>"; };
 		862D38B01908162C008693B7 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = Classes/Calendar/CalendarViewController.h; sourceTree = "<group>"; };
@@ -134,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86248B9F190D84E5004DF2F9 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				86248BA0190D8516004DF2F9 /* CD_CalEvent.h */,
+				86248BA1190D8516004DF2F9 /* CD_CalEvent.m */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
 		865F291118D639EC001F1B00 = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +332,7 @@
 		8695BC4518F3279400AA6A7A /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				86248B9F190D84E5004DF2F9 /* ManagedObjects */,
 				8695BC4A18F327D700AA6A7A /* DatabaseController.h */,
 				8695BC4B18F327D700AA6A7A /* DatabaseController.m */,
 			);
@@ -449,6 +462,7 @@
 				86FE858118F8785D008D3AD8 /* CalendarController.m in Sources */,
 				8695BC3F18F3273200AA6A7A /* CalendarEventViewController.m in Sources */,
 				865F292C18D639EC001F1B00 /* main.m in Sources */,
+				86248BA2190D8516004DF2F9 /* CD_CalEvent.m in Sources */,
 				8695BC1318F324AA00AA6A7A /* MenuViewController.m in Sources */,
 				8695BC4C18F327D700AA6A7A /* DatabaseController.m in Sources */,
 				8695BC4918F327C200AA6A7A /* NotificationController.m in Sources */,

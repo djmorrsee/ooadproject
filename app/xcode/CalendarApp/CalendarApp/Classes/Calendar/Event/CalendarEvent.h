@@ -13,10 +13,4 @@
 @property NSDate *eventDate;
 @property NSString *eventTitle;
 
-typedef struct {
-    NSUInteger year;
-    NSUInteger month;
-    NSUInteger day;
-} CurrentDate;
-
 @end

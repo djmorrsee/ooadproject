@@ -7,6 +7,7 @@
 //
 
 #import "Calendar.h"
+#import "CalendarEvent.h"
 #import "CalendarController.h"
 #import "CalendarDayViewController.h"
 #import "CalendarWeekViewController.h"
@@ -79,6 +80,7 @@
     }
 }
 
+#pragma mark - Interface Actions
 -(IBAction)showDay:(id)sender {
     [self removeViews];
     [self.calendarView addSubview:self.dayViewController.view];
@@ -101,6 +103,9 @@
 -(IBAction)addEvent:(id)sender {
     [self.cal createEventForSelectedDate];
 }
+
+
+#pragma mark - Delegate Actions
 
 
 @end
