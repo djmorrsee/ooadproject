@@ -7,6 +7,7 @@
 //
 
 #import "CalendarDayViewController.h"
+#import "CalendarEvent.h"
 #import "Calendar.h"
 
 @interface CalendarDayViewController ()
@@ -28,10 +29,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cal.calendarEvents;
-    tableData = [NSArray arrayWithObjects:@"Event1", @"Event2",@"event3",@"event4",@"event5",@"event6",@"event7",@"event9",@"event10",@"event11", nil];
+
 
 }
+
+NSArray *events;
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSMutableArray *strings = [[NSMutableArray alloc] init];
+    for(CalendarEvent *event in self.cal.calendarEvents)
+    {
+        [strings addObject:event.eventTitle];
+    }
+    
+    tableData = strings;
+}
+
+  //  tableData = [NSArray arrayWithObjects:, nil];}
 
 - (void)didReceiveMemoryWarning
 {
@@ -62,12 +76,10 @@ NSArray *tableData;
     return cell;
     
 }
-/* Will reimpliment this to go to single event view on click
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *message = [NSString stringWithFormat:@"Put in event details here.", [tableData objectAtIndex:indexPath.row]];
+
+- (void)tableData:(UITableView *)tableData didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableData deselectRowAtIndexPath:indexPath animated:YES];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:message delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
-    [alert show];
+    //[self.navigationController pushViewController:EVENTVIEW animated:YES];}
 }
-*/
 @end
