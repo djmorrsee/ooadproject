@@ -14,4 +14,8 @@
 
 @property CalendarEvent *event;
 
+@property IBOutlet UILabel *eventName;
+@property IBOutlet UILabel *eventDate;
+
+
 @end

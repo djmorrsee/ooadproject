@@ -7,6 +7,7 @@
 //
 
 #import "CalendarEventViewController.h"
+#import "CalendarEvent.h"
 
 @interface CalendarEventViewController ()
 
@@ -33,6 +34,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setLabels {
+    self.eventName.text = self.event.eventTitle;
+    self.eventDate.text = [NSDateFormatter localizedStringFromDate:self.event.eventDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
 }
 
 @end
