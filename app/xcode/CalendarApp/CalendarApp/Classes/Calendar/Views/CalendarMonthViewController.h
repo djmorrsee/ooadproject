@@ -11,4 +11,7 @@
 
 @interface CalendarMonthViewController : CalendarViewController
 
+
+//- (id)initWithSelectedDate:(NSDate *)selectedDate;
+
 @end

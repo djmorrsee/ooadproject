@@ -23,7 +23,12 @@
     }
     return self;
 }
-
+/*
+- (id)init
+{
+    return [self initWithSelectedDate:[NSDate date]];
+}
+*/
 - (void)viewDidLoad
 {
     [super viewDidLoad];

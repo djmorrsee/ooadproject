@@ -24,7 +24,6 @@
 // Interface Variables
 @property IBOutlet UIView *calendarView;
 
-
 // Interface Actions
 -(IBAction)showDay:(id)sender;
 -(IBAction)showWeek:(id)sender;

@@ -10,7 +10,7 @@
 #import "CalendarViewController.h"
 
 @interface CalendarDayViewController : CalendarViewController <UITableViewDelegate, UITableViewDataSource>{
-    NSArray *tableData;
+    NSMutableArray *tableData;
     }
 
 @property (nonatomic, retain) NSArray *tableData;

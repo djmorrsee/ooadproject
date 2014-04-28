@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class CalendarEvent;
+@class CalendarDayViewController;
 
 @interface Calendar : NSObject
 
@@ -23,5 +24,7 @@
 - (void)addEvent:(CalendarEvent *)event;
 
 - (void)selectDate:(NSDate *)date;
+
+- (void)updateCalendarEvents:(CalendarDayViewController *)events;
 
 @end

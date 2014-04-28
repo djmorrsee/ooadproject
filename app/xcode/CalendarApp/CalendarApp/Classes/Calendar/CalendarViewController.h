@@ -24,6 +24,9 @@
 
 @property (nonatomic, strong) NSCalendar *calendar;
 
+- (void)reloadData;
+
+
 @end
 
 

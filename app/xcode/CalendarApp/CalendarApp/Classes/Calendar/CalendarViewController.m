@@ -41,6 +41,18 @@
 
 }
 
+- (void)reloadData {
+    
+}
+
+-(void) showPreviousMonth {
+    [self reloadData];
+}
+
+-(void) showNextMonth {
+    [self reloadData];
+}
+
 /*
 #pragma mark - Navigation
 

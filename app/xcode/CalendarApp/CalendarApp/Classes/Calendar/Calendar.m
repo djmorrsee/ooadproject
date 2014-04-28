@@ -34,7 +34,7 @@
 }
 
 - (void)createEventForSelectedDate {
-    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"New Event" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done", nil];
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"New Event Title" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done", nil];
     view.alertViewStyle = UIAlertViewStylePlainTextInput;
     [view show];
 }
@@ -62,5 +62,10 @@
             break;
     }
 }
+
+- (void)updateCalendarEvents:(CalendarDayViewController *)events {
+    
+}
+
 
 @end
