@@ -29,11 +29,11 @@
         self.weekViewController = [[CalendarWeekViewController alloc] initWithNibName:@"CalendarWeekViewController" bundle:nil];
         self.monthViewContorller = [[CalendarMonthViewController alloc] initWithNibName:@"CalendarMonthViewController" bundle:nil];
         
+        [self loadCalendar];
         [self.dayViewController setCal:self.cal];
         [self.weekViewController setCal:self.cal];
         [self.monthViewContorller setCal:self.cal];
         
-        [self loadCalendar];
 
         [self sizeViews];
     }
