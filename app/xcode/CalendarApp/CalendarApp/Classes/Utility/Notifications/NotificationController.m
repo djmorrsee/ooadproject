@@ -7,7 +7,19 @@
 //
 
 #import "NotificationController.h"
+#import "CalendarEvent.h"
 
 @implementation NotificationController
+
+-(void)registerCalendarEvent:(CalendarEvent *)event {
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.fireDate = event.eventDate;
+    notification.alertBody = event.eventTitle;
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
+}
 
 @end

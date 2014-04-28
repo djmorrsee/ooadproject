@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class CalendarEvent;
+
 @interface NotificationController : NSObject
+
+-(void)registerCalendarEvent:(CalendarEvent *)event;
 
 @end
