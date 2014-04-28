@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CalendarViewController.h"
 
-@interface CalendarDayViewController : CalendarViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CalendarDayViewController : CalendarViewController <UITableViewDelegate, UITableViewDataSource>{
+    NSArray *tableData;
+    }
+
+@property (nonatomic, retain) NSArray *tableData;
 
 @end

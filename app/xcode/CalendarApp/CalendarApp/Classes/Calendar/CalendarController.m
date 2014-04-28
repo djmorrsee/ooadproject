@@ -80,6 +80,12 @@
     }
 }
 
+NSArray *monthList;
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [monthList count];
+}
+
 #pragma mark - Interface Actions
 -(IBAction)showDay:(id)sender {
     [self removeViews];

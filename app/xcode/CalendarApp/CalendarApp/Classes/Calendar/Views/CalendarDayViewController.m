@@ -10,11 +10,12 @@
 #import "CalendarEvent.h"
 #import "Calendar.h"
 
-@interface CalendarDayViewController ()
+//@interface CalendarDayViewController ()
 
-@end
+//@end
 
 @implementation CalendarDayViewController
+@synthesize tableData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,12 +31,10 @@
 {
     [super viewDidLoad];
 
-
 }
 
-NSArray *events;
-
 - (void)viewWillAppear:(BOOL)animated {
+    
     NSMutableArray *strings = [[NSMutableArray alloc] init];
     for(CalendarEvent *event in self.cal.calendarEvents)
     {
@@ -45,27 +44,19 @@ NSArray *events;
     tableData = strings;
 }
 
-  //  tableData = [NSArray arrayWithObjects:, nil];}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)displaySelectedDate {
-    
-}
-
-NSArray *tableData;
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [tableData count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SimpleTableItentifier";
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
@@ -77,9 +68,16 @@ NSArray *tableData;
     
 }
 
-- (void)tableData:(UITableView *)tableData didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableData deselectRowAtIndexPath:indexPath animated:YES];
-    
-    //[self.navigationController pushViewController:EVENTVIEW animated:YES];}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSString *message = [NSString stringWithFormat:@"You selected %@",[tableData objectAtIndex:indexPath.row]];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+													message: message delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+	[alert show];
 }
+
+- (void)displaySelectedDate {
+    
+}
+
+
 @end
