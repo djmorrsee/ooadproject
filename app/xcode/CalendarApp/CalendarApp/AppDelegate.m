@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MenuViewController.h"
-#import "CalendarController.h"
+#import "CalendarTabViewController.h"
 #import "DatabaseController.h"
+#import "NotificationController.h"
 
 #import "Calendar.h"
 
@@ -28,12 +29,20 @@
     // Menu Controller
     self.menuViewController = [[MenuViewController alloc] init];
     
-    // Calendar Controller
-    self.calendarViewController = [[CalendarController alloc] initWithNibName:@"CalendarController" bundle:nil];
-    [self.calendarViewController.cal selectDate:[NSDate date]];
-    
     // Database Controller
     self.databaseController = [[DatabaseController alloc] init];
+    
+    // Notification Controller
+    self.notificationController = [[NotificationController alloc] init];
+    
+    // Calendar Controller
+    //self.calendarViewController = [[CalendarController alloc] initWithNibName:@"CalendarController" bundle:nil];
+    //[self.calendarViewController.cal selectDate:[NSDate date]];
+    self.calendarTabViewController = [[CalendarTabViewController alloc] initWithNibName:@"CalendarTabViewController" bundle:nil];
+    
+    
+    
+    
     
     [self loadCalendarEvents];
     
@@ -87,11 +96,11 @@
 #pragma mark - Authored Methods
 
 - (void)showCalendar {
-    [self.window.rootViewController presentViewController:self.calendarViewController animated:YES completion:nil];
+    [self.window.rootViewController presentViewController:self.calendarTabViewController animated:YES completion:nil];
 }
 
 - (void)loadCalendarEvents {
-    [self.calendarViewController.cal initializeEvents];
+    [self.calendarTabViewController.cal initializeEvents];
 }
 
 #pragma mark - Core Data stack
@@ -175,4 +184,9 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - Notifcations
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Alarm" message:notification.alertBody delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+    [view show];
+}
 @end

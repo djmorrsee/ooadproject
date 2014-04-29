@@ -1,8 +1,8 @@
 //
-//  CalendarViewController.h
+//  CalendarTabViewController.h
 //  CalendarApp
 //
-//  Created by Daniel Morrissey on 4/11/14.
+//  Created by Daniel Morrissey on 4/29/14.
 //  Copyright (c) 2014 Daniel Morrissey. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 @class CalendarWeekViewController;
 @class CalendarMonthViewController;
 
-@interface CalendarController : UIViewController
+@interface CalendarTabViewController : UITabBarController
 
 @property Calendar *cal;
 
@@ -21,16 +21,6 @@
 @property CalendarWeekViewController *weekViewController;
 @property CalendarMonthViewController *monthViewContorller;
 
-// Interface Variables
-@property IBOutlet UIView *calendarView;
-
-// Interface Actions
--(IBAction)showDay:(id)sender;
--(IBAction)showWeek:(id)sender;
--(IBAction)showMonth:(id)sender;
-
--(IBAction)addEvent:(id)sender;
-
--(IBAction)backToMenu:(id)sender;
+- (void)reloadAllDataViews;
 
 @end

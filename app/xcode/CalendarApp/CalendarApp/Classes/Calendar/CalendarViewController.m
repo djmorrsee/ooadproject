@@ -41,17 +41,10 @@
 
 }
 
-- (void)reloadData {
-    
+-(IBAction)newEvent:(id)sender {
+    [self.cal createEventForSelectedDate];
 }
 
--(void) showPreviousMonth {
-    [self reloadData];
-}
-
--(void) showNextMonth {
-    [self reloadData];
-}
 
 /*
 #pragma mark - Navigation

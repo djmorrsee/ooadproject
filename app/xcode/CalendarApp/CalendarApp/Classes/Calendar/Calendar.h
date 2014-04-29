@@ -10,8 +10,11 @@
 
 @class CalendarEvent;
 @class CalendarDayViewController;
+@class CalendarTabViewController;
 
 @interface Calendar : NSObject
+
+@property (weak) CalendarTabViewController *controller;
 
 @property NSDate *currentDate;
 @property NSDate *selectedDate;
@@ -25,6 +28,7 @@
 
 - (void)selectDate:(NSDate *)date;
 
-- (void)updateCalendarEvents:(CalendarDayViewController *)events;
+
+- (NSArray *)eventsForDay:(NSDate *)date;
 
 @end

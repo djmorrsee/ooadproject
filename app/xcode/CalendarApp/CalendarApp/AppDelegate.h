@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class MenuViewController;
-@class CalendarController;
+@class CalendarTabViewController;
 @class DatabaseController;
 @class NotificationController;
 
@@ -22,8 +22,9 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property MenuViewController *menuViewController;
-@property CalendarController *calendarViewController;
+@property CalendarTabViewController *calendarTabViewController;
 @property DatabaseController *databaseController;
+@property NotificationController *notificationController;
 
 - (void)showCalendar;
 - (void)loadCalendarEvents;

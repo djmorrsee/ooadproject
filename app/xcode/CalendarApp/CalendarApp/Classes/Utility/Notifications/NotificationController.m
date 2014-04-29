@@ -13,13 +13,12 @@
 
 -(void)registerCalendarEvent:(CalendarEvent *)event {
     UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.fireDate = event.eventDate;
+    notification.fireDate = [NSDate dateWithTimeInterval:10 sinceDate:event.eventDate];
     notification.alertBody = event.eventTitle;
     notification.timeZone = [NSTimeZone defaultTimeZone];
     notification.soundName = UILocalNotificationDefaultSoundName;
     
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    
 }
 
 @end

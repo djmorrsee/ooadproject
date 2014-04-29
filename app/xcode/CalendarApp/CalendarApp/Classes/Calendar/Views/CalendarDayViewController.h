@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "CalendarViewController.h"
 
-@interface CalendarDayViewController : CalendarViewController <UITableViewDelegate, UITableViewDataSource>{
-    NSMutableArray *tableData;
-    }
 
-@property (nonatomic, retain) NSArray *tableData;
+@interface CalendarDayViewController : CalendarViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property IBOutlet UILabel *dateLabel;
+@property IBOutlet UITableView *tableView;
+
+-(IBAction)now:(id)sender;
+
+-(IBAction)nextDay:(id)sender;
+-(IBAction)prevDay:(id)sender;
 
 @end

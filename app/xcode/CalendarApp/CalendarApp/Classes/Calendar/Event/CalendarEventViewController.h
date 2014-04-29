@@ -16,6 +16,10 @@
 
 @property IBOutlet UILabel *eventName;
 @property IBOutlet UILabel *eventDate;
+@property IBOutlet UILabel *eventTime;
 
+-(IBAction)deleteEvent:(id)sender;
+-(IBAction)editEvent:(id)sender;
+-(IBAction)backToCalendar:(id)sender;
 
 @end

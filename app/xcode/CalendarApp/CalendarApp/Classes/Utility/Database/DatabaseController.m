@@ -37,7 +37,45 @@
 }
 
 - (void)DeleteEvent:(CalendarEvent *)event {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CD_CalEvent" inManagedObjectContext:self.managedObjectContext];
     
+    [request setEntity:entity];
+    NSPredicate *eventFilter = [NSPredicate predicateWithFormat:@"(label like[cd] %@)", event.eventTitle, event.eventDate];
+    
+    [request setPredicate:eventFilter];
+    
+    NSError *err;
+    NSArray *records = [self.managedObjectContext executeFetchRequest:request error:&err];
+    
+    for (CD_CalEvent *cdev in records) {
+        [self.managedObjectContext deleteObject:cdev];
+    }
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Error Deleting Event %@", [error localizedDescription]);
+    }
+    
+}
+
+- (void)ClearAllEvents {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CD_CalEvent" inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:entity];
+    
+    NSError *err;
+    NSArray *records = [self.managedObjectContext executeFetchRequest:request error:&err];
+    
+    for (CD_CalEvent *cdev in records) {
+        [self.managedObjectContext deleteObject:cdev];
+    }
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Error Deleting Event %@", [error localizedDescription]);
+    }
 }
 
 - (NSArray *)GetEventsForDate:(NSDate *)date {

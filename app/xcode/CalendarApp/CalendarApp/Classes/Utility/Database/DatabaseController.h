@@ -19,5 +19,6 @@
 
 - (NSArray *)GetEventsForDate:(NSDate *)date;
 - (NSArray *)GetAllEvents;
+- (void)ClearAllEvents;
 
 @end

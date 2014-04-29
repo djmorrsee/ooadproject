@@ -22,9 +22,7 @@
 
 @property (nonatomic, strong) NSDate *selectedDate;
 
-@property (nonatomic, strong) NSCalendar *calendar;
-
-- (void)reloadData;
+-(IBAction)newEvent:(id)sender;
 
 
 @end

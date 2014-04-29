@@ -10,12 +10,18 @@
 #import "CalendarEvent.h"
 #import "DatabaseController.h"
 #import "AppDelegate.h"
+#import "CalendarTabViewController.h"
+#import "NotificationController.h"
+#import "EventEditViewController.h"
 
 @implementation Calendar
 
 -(id)init {
     self = [super init];
     if (self) {
+        self.currentDate = [NSDate date];
+        [self selectDate:self.currentDate];
+        [self initializeEvents];
         
     }
     return self;
@@ -29,42 +35,35 @@
 - (void)addEvent:(CalendarEvent *)event {
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     [delegate.databaseController SaveEvent:event];
+    [delegate.notificationController registerCalendarEvent:event];
     
-    [self initializeEvents];
+    [self.controller reloadAllDataViews];
 }
 
 - (void)createEventForSelectedDate {
-    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"New Event Title" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done", nil];
-    view.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [view show];
+    
+    EventEditViewController *newEventVC = [[EventEditViewController alloc] init];
+    newEventVC.delegate = self;
+    newEventVC.startDate = self.selectedDate;
+    [self.controller presentViewController:newEventVC animated:YES completion:nil];
+    
 }
 
 - (void)selectDate:(NSDate *)date {
     self.selectedDate = date;
 }
 
-# pragma mark - Delegate Methods
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    CalendarEvent *event;
-    switch (buttonIndex) {
-        case 0:
-            // Cancelled, Do Nothing
-            
-            break;
-        case 1:
-            // New Event
-            event = [[CalendarEvent alloc] init];
-            event.eventDate = self.selectedDate;
-            event.eventTitle = [[alertView textFieldAtIndex:0] text];
-            [self addEvent:event];
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)updateCalendarEvents:(CalendarDayViewController *)events {
+- (NSArray *)eventsForDay:(NSDate *)date {
+    NSMutableArray *events = [[NSMutableArray alloc] init];
     
+    for (CalendarEvent *event in self.calendarEvents) {
+        NSDateFormatter *f = [[NSDateFormatter alloc] init];
+        [f setDateFormat:@"MMddyyyy"];
+        if ([[f stringFromDate:event.eventDate] isEqualToString:[f stringFromDate:date]]) {
+            [events addObject:event];
+        }
+    }
+    return events;
 }
 
 
